@@ -1,0 +1,441 @@
+/* ******************************************************************** */
+/* inicio Css pagina de Index */
+/* ******************************************************************** */
+
+.resalta{
+    font-size: 18px;
+    font-style: oblique;
+  } 
+#b_index {
+    width: 750px;
+    height: 750px;
+    background: rgb(241, 239, 234);
+    margin:auto;
+    margin-top: 15px;
+}
+#h_index{
+    height: 250px;
+    width: 750px;
+    /* background: red; */
+}
+#banner{
+    height: 250px;
+    width:  500px;
+    background: black;
+    float: right;
+}
+#logo_index{
+    height: 125px;
+    width: 250px;
+    background-color: rgb(54, 120, 170)  ;
+}
+#buscador{
+    height: 125px;
+    width: 250px;
+    background-color: rgb(54, 170, 97)  ; 
+}
+nav{
+    height: 50px;
+    width: 750px;
+    background: rgb(54, 15, 117);
+}
+nav ul{ 
+     list-style: none;
+}
+nav a{
+    color:white;
+    padding: 25px 15px 0px 90px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav ul li{
+    float:left;
+}
+#submenuInicio  {
+    position: absolute;
+    left:300px;
+    top: 280px;
+    width: 200px;
+    height: 131px;
+    z-index: 1;
+    color:aliceblue;
+}    
+#submenuInicio li {
+    list-style: none;
+    color:black;
+}  
+#submenuInicio li a{
+    color:rgb(224, 216, 216);
+} 
+#submenuParametros  {
+    position: absolute;
+    left:1030px;
+    top: 280px;
+    width: 200px;
+    height: 131px;
+    z-index: 1;
+    color:aliceblue;
+}    
+#submenuParametros li {
+    list-style: none;
+    color:black;
+}  
+#submenuParametros li a{
+    color:white;
+}   
+#m_index{
+    height: 400px;
+    background-color: black;
+}
+#lado_izquierdo{
+    height: 400px;
+    width: 100px;
+    background-color: rgb(20, 109, 23)  ;
+    float:left;
+}
+
+#art_index{
+    height: 400px;
+    width: 547px;
+    background-color: yellow  ;
+    float:left;
+}
+#lado_derecho{
+    height: 400px;
+    width: 100px;
+    background-color: rgb(20, 109, 23)  ;
+    float:right;
+}
+#foot_index{
+    height: 50px;
+    background: orange;
+}
+
+/* Fin de CSS para pagina de index    */
+
+/* ******************************************************************** */
+/* Inicio etiquetas seccion dise#o datos de la factura   ************** */
+/* ******************************************************************** */
+#df_body{
+    width:  750px;
+    height: 750px;
+   
+    margin:auto;
+    margin-top: 15px;
+    text-align: center;
+    border: solid 1px;
+}
+#df_main{
+    width:  700px;
+    height: 700px;
+    
+    margin:auto;
+    margin-top: 15px;
+    text-align: center;
+    border: dashed 1px;
+}
+.df_izquierdo{
+    width: 100px;
+    height: 600px;
+    
+    
+    text-align: center;
+    border: solid 1px;
+    float:left;
+}
+.df_central{
+    width:  480px;
+    height: 600px;
+    margin:auto;
+    float:left;
+    text-align: center;
+    border: solid 1px;
+  
+}
+
+.df_derecho{
+    width: 100px;
+    height: 600px;
+    text-align: center;
+     border: solid 1px;
+    float:left;
+}
+
+.factura {
+    width: 800px;
+    height: 1100px;
+    margin:auto;
+    
+}
+.interno {
+    width: 800px;
+    height:1070px; 
+    border: solid 1px;
+    margin:auto;
+}
+
+
+
+
+.head1 {
+    margin: 25px 25px 1px 25px;
+    width: 750px;
+   
+}
+.logo {
+    width: 750px;
+    height: 125px;
+    font-size:xx-large;
+ }
+.marco {
+    width: 390px;
+    height: 100px;
+    margin: 1px;
+    float:left;
+   }     
+ 
+figure img{
+   width:  170px;
+   height: 90px;
+   }
+
+.docType {
+    width: 345px;
+    height: 30px;
+    float:left;
+    margin-top: 95px;
+    color: rgb(206, 21, 85);
+    font-weight: bold;
+   }
+
+.invoiceData {
+    width: 750px;
+    height: 100px;
+    
+}
+.facturador {
+    width: 750px;
+    height: 15px; 
+}
+#nameFacturador {
+     width: 750px;
+    
+}
+#einFacturador{
+    width: 750px;
+   line-height: 0.7;
+    font-size: small;
+} 
+.focusAdress{
+width: 200px;
+height: 100px;
+line-height : 2px;
+font-size: small;
+float:left;
+}
+.incvoiceData{
+   padding-top: 500px;
+}
+.invoiceTit {
+    width: 545px;
+    height: 35px;
+    float: left;
+    text-align: center;
+}
+.tituloa {
+  width: 100px;
+   float: left;
+   margin-left: 150px;  
+    border: solid 1px;
+}    
+.titulob {
+    width: 110px;
+    padding-left: 15px;
+    float: left;
+     border: solid 1px; 
+     margin-right: 85px;
+}
+
+.titulo2 {
+    width: 100px;
+    height: 19px;
+    float: left;
+    margin-left: 150px;
+    border: solid 1px;
+ }
+.titulo3 {
+    width: 125px;
+    float:left;   
+    border: solid 1px;
+}
+.cabecera{
+    width: 750px;
+    height: 135px;
+    border:solid 1px;
+    margin:25px ;
+}
+
+#descripcion{
+    width: 250px;
+}
+
+
+.itemsCabecera{
+    width: 750px;
+    font-weight: bold;
+     margin:auto ;
+}
+table td{
+     border: solid 1px;
+     text-align: center;
+}
+
+ .items .c1 {
+    width: 2cm;
+    }
+.items .c2 {
+    width: 2cm;
+    }
+.items .c3 {
+    width: 10cm;
+    }
+.items .c4 {
+    width: 3cm;
+    }
+.items .c5 {
+    width: 3cm;
+    }
+
+#itemsDetalle{
+  width: 750px;
+  height: 425px;
+  margin:auto ;
+   text-align: left;
+    border: solid 1px;
+}
+
+
+#custNameTit{
+   padding-left: 5px;
+   width: 150px;
+   height: 20px;
+   float: left;
+}
+#customerName{
+    width: 748px;
+    height: 65px;
+    border-bottom: solid 1px; 
+    float: left;
+}
+
+#custName{
+     width: 400px;
+     height: 20px;
+     float:left;
+     padding-left: 5px;
+     font-weight: bold;
+}
+#custId{
+     width: 800px;
+     padding-left: 5px;
+     height: 20px;
+     text-align: left;
+     border-right-width: 500px;
+}
+.customer {
+    display: inline-block;
+    margin-top: 10px;
+}
+.Address{
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 370px;
+    height: 60px;
+    float:left;
+}
+.custAdd{
+    border-right: solid 1px;
+    height: 60px;
+    padding-top: 5px;
+}
+#condiciones {
+    margin-top: 30px;
+    height: 50px;
+    margin-left: 25px;
+    width:700px;
+} 
+.condicion1 {
+   width: 50px; 
+   float: left;
+}  
+.referencia {
+     width:250px; 
+    float:left;
+    text-align: left;
+}
+.condicion2 {
+   width:100px; 
+   float: left;
+ }  
+ .terminos {
+     width:200px; 
+    float:left;
+    text-align: left;
+}
+#retenciones {
+    width:  750px;
+    height: 30px;
+    display: inline-block;
+    text-align: right;
+     margin-top: 10px ;
+}
+#totales {
+    width:  750px;
+    height: 30px;
+    display: inline-block;
+    text-align: right;
+    margin-top: 10px ;
+}
+#descrTit {
+    width: 440px;
+    float:left;
+    font-size:larger;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 20px;
+}
+ 
+#totalTit {
+    width: 150px;
+    float:left;
+    font-size:larger;
+    font-weight: bold;
+    margin-right: 48px;
+}
+#total {
+    width: 80px;
+    float: left;
+    text-align: center;
+    font-weight: bold; 
+    border: solid 1px;
+   
+}
+
+
+footer {
+    text-align: left;
+    line-height : 1px;
+    font-size: small;
+    width: 750px;
+    margin:20px 0px 45px 20px ;
+}
+
+.botonera{
+    float: left;
+    margin: 20px 12px 0px 0px;
+}
+/* .grabar{
+    width: 150px;
+    float: left;
+    text-align: center;
+    font-weight: bold; 
+} */

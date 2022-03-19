@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura Focus Corp</title>
+    <link rel="stylesheet" href="facturaEstilos.css">
+    <script src="funcionesJS.js"></script>
+    <script src="jquery-1.6.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        cargaBD();
+        });
+    </script>
+</head>
+
+<body id="factura" class="factura" onload="FacturaOut()" >
+<!--div id="results"></div -->
+<div class="interno">
+<header class="head1">
+    <div class="logo">
+        <figure class="marco">
+            <section id="logoFacturador"> </section>
+        </figure>
+        <section id="docType" class="docType">FACTURA</section>
+    </div>
+
+    <div class="invoiceData">
+        <section class="nameFacturador" id="nameFacturador"> </section>
+        <section class="einFacturador" id="einFacturador"></section>
+        
+        <section class="focusAdress">
+            <p id="adr1"></p>
+            <p id="adr2"></p>
+            <p id="adr3"></p>
+        </section> 
+        <div class="invoiceTit">
+            <section class="tituloa" id="tituloa"></section>
+            <section class="titulob" id="titulob"></section>
+            <section class="titulo2" id="titulo2"></section>
+            <section class="titulo3" id="titulo3"></section>
+        </div>
+    </div>
+    
+
+</header>
+
+<main class="cabecera">
+    <div id="customerName" class="customerName">
+        <section id="custNameTit" class="customer">Nombre Cliente:</section>  
+        <section id="custName"    class="customer"> </section>
+        <section id="custId"      class="customer"></section>            
+    </div>
+    
+    <div class=" Address">
+        <section class="custAdd" id="custAdd"></section>
+    </div>
+
+    <div class="Address">
+        <section class="custShip" id="custShip"></section>
+    </div>
+</main>
+<div id="condiciones" class="condiciones">
+    <!-- <section id="condicion1" class="condicion1"></section> -->
+    <section id="docref" class="docref"></section>
+    <!-- <section id="condicion2" class="condicion2"></section> -->
+    <section id="terminos" class="terminos"></section>
+</div>
+<article id= "itemsCabecera" class="itemsCabecera">
+<table class="items" id="items" >
+    <tr>
+    <td class="c1" id="itemlabel"> </td>
+    <td class="c2" id="qtylabel"> </td>
+    <td class="c3" id="descriptionlabel"> </td>
+    <td class="c4" id="uclabel"></td>
+    <td class="c5" id="sbtlabel"> </td>
+    </tr>
+</table>
+</article>
+<article id="itemsDetalle" class="itemsDetalle">
+    <table class="items" id="itemsTab" >
+    <tr>
+        <td class="c1" id="item"></td>
+        <td class="c2" id="qty"></td>
+        <td class="c3" id="description"></td>
+        <td class="c4" id="costo"></td>
+        <td class="c5" id="subtotal"></td>
+    </tr>
+    </table>
+</article>
+<!-- <div class="retenciones" id="retenciones">
+       <section class="descRet" id="descrTit">Retenciones</section>
+       <section class="PorRet"  id="totalTit">% Ret.:</section>
+       
+</div> -->
+<div class="totales" id="totales">
+    <section class="descrTit" id="descrTit"></section>
+    <section class="totalTit" id="totalTit">Total USD:</section>
+    <section id="total" class="total"></section>
+</div>
+<footer>
+    <p class="foot" id="f1"></p>
+    <p class="foot" id="f2"></p>
+    <p class="foot" id="f3"></p>
+    <p class="foot" id="f4"></p>
+</footer>
+
+<div class="botonera" id="back"><br>
+    <a href="datos_factura.html" class="button">Regresar</a>
+</div>
+<div class="botonera" id="IdimprimirFact"><br>
+    <button id="imprimir">Imprimir Factura</button>
+</div>
+<div class="botonera" id="IdgrabarFact"><br>
+    <!-- <button id="grabar" onclick="grabahistoricoFactura()">Grabar Factura</button> -->
+    <button id="grabar">Grabar Factura</button>
+     
+</div>
+    <!-- <script src="factura.js"></script> -->
+ 
+</div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de ventas</title>
+    <link rel="stylesheet" href="recibosEstilos.css">
+</head>
+<body id="recibo_body" class="recibo_body">
+    <h1>RECIBO DE VENTAS</h1>
+    <main id="recibo_main" class="recibo_main">
+       <div id="div_consultor" class="div_consultor">
+        <p   id="p_nombre"      class="p_consultor">Nombre:</p>
+        <p   id="p_fecha"       class="p_consultor">Fecha:</p>
+        <p   id="p_NIP"         class="p_consultor">Numero de Identificacion:</p>
+        <p   id="p_receipt"     class="p_consultor">Numero de Recibo:</p>
+       </div><br>
+       <div id="div_empresa"   class="div_empresa">
+        <p   id="p_vendido"     class="p_empresa">Vendido a:</p> 
+        <p   id="nomEmp"        class="p_empresa"></p>
+        <p   id="direccion1"    class="p_empresa">Direccion 1</p>
+        <p   id="direccion2"    class="p_empresa">Direccion 2</p>
+        <p   id="direccion3"    class="p_empresa">Direccion 3</p>
+        <p   id="direccion4"    class="p_empresa">Direccion 4</p>
+        </div>
+       <div class="div_cabeceraPago" id="div_cabeceraPago">
+        <table class="tbl_cabeceraPago">
+            <tr>
+                <th  class="hd_tablePago"  id="MetodoHD">Metodo de pago</th>
+                <th  class="hd_tablePago"  id="CodigoHD">Transaccion</th>
+                <th  class="hd_tablePago"  id="FechaHD">Fecha</th>
+                <th  class="hd_tablePago"  id="BancoHD">Banco</th>
+            </tr>
+            <tr>
+                <td  class="dt_tablePago" id="MetodoDT"> </td>
+                <td  class="dt_tablePago" id="CodigoDT"> </td>
+                <td  class="dt_tablePago" id="FechaDT"> </td>
+                <td  class="dt_tablePago" id="BancoDT"> </td>
+            </tr>
+        </table>
+       </div><br>
+       <div class="div_cabeceraServicio" id="div_cabeceraServicio">
+        <table class="tbl_cabeceraServicio" id="tbl_cabeceraServicio">
+            <tr>
+                <th  class="hd_tableServicio" id="CantidadHD">Cantidad </th>
+                <th  class="hd_tableServicio" id="DescripcionHD">Descripcion </th>
+                <th  class="hd_tableServicio" id="CostoUntHD">C/Unt </th>
+                <th  class="hd_tableServicio" id="SubtotalHD">Subtotal</th>
+            </tr>
+            <tr>
+                <td  class="dt_tableServicio"  id="CantidadDT"> </td>
+                <td  class="dt_tableServicio"  id="DescripcionDT"> </td>
+                <td  class="dt_tableServicio"  id="CostoUntDT"> </td>
+                <td  class="dt_tableServicio"  id="SubtotalDT"> </td>
+            </tr>
+        </table>
+       </div><br>
+       <div class="div_total"   id="div_total">
+        <table class="tbl_total" id="tbl_total">
+            <tr>
+                <td class="celdaVacia" id="celda1"></td>
+                <td class="celdaVacia" id="celda2"></td>
+                <td class="celdaVacia" id="titSub">Total:</td>
+                <td class="dt_total" id="Total"></td>
+            </tr>
+        </table>
+       </div><br>
+       <div class="div_firma"    id="div_firma">
+        <p>Recibi conforme</p><br><br>
+        <p>-------------------------------------</p>
+        <p>Firma</p>
+        <p>Nombre Consultor</p>
+        </div><br>
+    </main>
+</body>
+</html>

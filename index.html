@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de inicio procesos contables</title>
+    <script src="funcionesJS.js"></script>
+    <link rel="stylesheet" href="facturaEstilos.css">
+    <script src="jquery-1.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#factura").hide();
+        $("#recibo").hide();
+       
+        $("#submenuInicio").hide();
+        $("#submenuparametros").hide();
+        $("#datFac").hover(function (){$("#factura").show();},
+                           function (){$("#factura").hide();});  
+        $("#datRec").hover(function () { $("#recibo").show(); },
+                           function () { $("#recibo").hide(); });
+        $("#params").hover(function () { $("#parametros").show(); },
+                           function () { $("#parametros").hide(); });
+      
+        $("#inicio").toggle( ()=>{$("#submenuInicio").show();},
+                             ()=>{$("#submenuInicio").hide()});
+        $("#inicio").toggle(() => { $("#submenuParametros").show(); },
+                            () => { $("#submenuParametros").hide() });
+        
+        });
+    </script>
+</head>
+
+<body id="b_index" onload="cargaBD()">   
+        <header id="h_index">
+        <section id="banner"></section>
+        <section id="logo_index"></section>
+        <section id="buscador"></section>
+    </header>
+    <nav class="navegacion" id="navegacion">   
+        <ul>
+            <li id="inicio" class="inicio"><a href="#">INICIO</a></li>
+            <li id="datFac" class="datFac"><a href="datos_factura.html">Facturas</a></li>
+            <li id="datRec" class="datRec"><a href="datos_recibo.html">Recibos</a></li>
+            <li id="params" class="params"><a href="#">Parametros</a></li>
+        </ul>
+
+    </nav>
+    <div id="submenuInicio">
+        <ul>
+            <li id="opcion3"><a href="creacion_empresa.html">Crear Empresa</a> </li>
+            <li id="opcion4"><a href="creacion_clientes.html">Crear Clientes</a> </li>
+            <li id="opcion5"><a href="creacion_productosServicios.html">Crear Productos </a> </li>
+            <li id="opcion6"><a href="creacion_titulos.html">Creacion etiquetas</a> </li>
+        </ul>
+    </div>
+    <div id="submenuParametros">
+        <ul>
+            <li id="opcion1"><a href="crear_baseDatos.html">Crear BD Recibos</a> </li>
+            <li id="opcion2"><a href="historico_documentos.html">Historico</a> </li>
+        </ul>
+    </div>
+    <main id="m_index">
+        <aside id="lado_izquierdo">
+
+        </aside>
+        <article id="art_index">
+            <p id="factura"> La opcion facturas , presenta una pantalla para la seleccion de datos,y posteriormente la factura digital la cual puede ser impresa. Las empresas que pueden generar facturas son Focus Venezuela y Focus USA. Para Focus Venezuela existe un archivo Excel con los numeros disponibles para imprimir. Para Focus USA ese numero es un consecutivo
+            </p>
+            <p id="recibo"> La opcion Recibo , presenta una pantalla para la seleccion de datos,
+                y posteriormente el recibo digital la cual puede ser impreso.
+            </p>
+            <p id="parametros"> La opcion Parametros, genera una base de datos enIndexDB </p>
+        </article>
+        <aside id="lado_derecho">
+
+        </aside>
+    </main>
+    <footer id="foot_index">
+
+    </footer>
+</body>
+
+</html>

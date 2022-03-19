@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de clientes</title>
+    <script src="funcionesJS.js"></script>
+</head>
+<body onload="cargaBD()">
+  <div id="datos_cliente">
+    <input type="text" id="nombre_cliente">Nombre del cliente <br>
+    <input type="text" id="id_fiscal">Identificador Fiscal <br>
+    <input type="text" id="dir_fiscal">Direccion Fiscal <br>
+    <input type="text" id="dir_envio">Direccion Envio <br>
+    <input type="text" id="dir_facturacion">Direccion Facturacion <br>
+    <input type="tel"  id="telefono"> Telefono de contacto <br>
+    <input type="text" id="tipo_empresa">Tipo de empresa: 1= Facturador 2=CLiente 3=Ambos<br>
+    <input type="text" id="idioma_fac">Idioma factura: ESP / ENG <br>
+    <input type="text" id="estado">Estado: A / I <br>
+    
+    <input type="text" id="porcentaje_impuesto">Porcentaje de Impuesto a las ventas <br>
+    <input type="text" id="porcentaje_otraRetencion">Porcentaje de otra Retencion <br>
+    <input type="text" id="terminosCondiciones">Terminos y Condiciones<br>
+    <input type="text" id="nombredel_logo">Nombre y extension del Logo<br>
+    <input type="text" id="coordenada_Bancaria1">Coordenada bancaria 1<br>
+    <input type="text" id="coordenada_Bancaria2">Coordenada bancaria 1<br>
+    <input type="text" id="coordenada_Bancaria3">Coordenada bancaria 1<br>
+    <input type="text" id="coordenada_Bancaria4">Coordenada bancaria 1<br>
+    <input type="button" id="Grabar" onclick="grabaCliente()" value="Grabar">
+  </div>  
+
+  <div id="consulta_datos">
+
+  </div>
+</body>
+</html>

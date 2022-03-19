@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar registros de facturas creados automaticamente</title>
+    <script src="funcionesJS.js"></script>
+    <script src="jquery-1.6.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            cargaBD();
+        });
+    </script>
+</head>
+
+<body onload="poblarConsultaHistorico();">
+
+    <h1>Historico de facturas</h1>
+    <div class="aligncenter">
+        <table id="table-head">
+            <thead>
+                <th>Facturador</th>
+                <th>Factura</th>
+                <th>     Fecha     </th>
+                <th>Cliente</th>
+                <th>Descripcion</th>
+                <th>  Doc Ref</th>
+                <th>Terminos</th>
+                <th>C/U</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+            </thead>
+            <tbody id="tbody-documento">
+
+            </tbody>
+        </table>
+    </div>
+
+    
+    <!-- <script src="poblarConsultaHistorico()"></script> -->
+
+
+
+
+</body>
+
+</html>

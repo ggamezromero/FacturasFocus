@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de Productos y Servicios</title>
+    <script src="funcionesJS.js"></script>
+</head>
+
+<body onload="cargaBD()">
+    <div id="datos_ps">
+        <input type="text" id="codigo_ps">Codigo interno del producto /servicio<br>
+        <input type="text" id="tipo_ps">Tipo: P / S<br>
+        <input type="text" id="nombre_ps">Nombre del Producto/Servicio<br>
+        <input type="text" id="descrPs_Esp">Descripcion del producto/servicio ESP<br>
+        <input type="text" id="descrPs_Eng">Descripcion del producto/servicio ENG<br>
+        <input type="text" id="edicion_ps">Edicion del producto<br>
+        <input type="text" id="version_ps">Version del producto<br>
+         
+        <input type="button" id="Grabar" onclick="grabaProductosServicios()" value="Grabar">
+    </div>
+
+    <div id="consulta_datos">
+
+    </div>
+</body>
+
+</html>

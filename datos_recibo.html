@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Recibo</title>
+    <link rel="stylesheet" href="recibosEstilos.css">
+    <script src="/JQUERY/jquery-1.6.3.min.js"></script>
+  
+</head>
+<body class="dr_body" id="dr_body">
+     
+<main class="dr_main" id="dr_main">
+
+
+  <div class="df_izquierdo">
+  <aside >
+    
+  </aside>
+  </div>  
+ <div class="df_central">  
+  <section>
+    <h1>Proceso de generacion de Recibos</h1>
+ <p><h2>Seleccione datos del Recibo a generar</h2></p>
+
+
+ <!-- Inicio del formulario de seleccion de datos del Recibo a imprimir-->
+ <form  onsubmit="return validar()"  action="reciboSalida.html"  method="get" id="form2">
+    <br><label for="Empresa">Seleccione Consultor</label><br>
+           <select name="facturador" id="facturador" form="form2">
+              <option value="sel">Seleccione</option>
+              <option value="Yajaira Davila" selected>Yajaira Davila</option>
+              <option value="German Romero">German Romero</option>
+              <option value="Otro consultor">Otro consultor</option>
+           </select>
+    
+    <br><label id ="l_numfac" for="numfac">Numero de Recibo:</label><br>
+    <input type="number" id="numrec" name="numrec" >
+      
+    <br><label for="cliente">Seleccione receptor:</label><br>
+            <select  name="receptor" id="receptor" form="form2" > 
+             <option value="rec">Seleccione </option>
+             <option value="Focus Consulting" selected>Focus Consulting</option>
+             <option value="Focus Systems Consulting Corp">Focus Corp</option>
+            </select>
+    <br><label id ="l_qty" for="qty">Cantidad:</label><br>
+        <input type="number" id="qty" name="qty"  >
+    <br><label id="l_costo" for="costo">Costo Unitario:</label><br>
+         <input type="decimal" id="costo" name="costo"   ><br>
+    
+    <br><label id="l_descripcion" for="descripcion">Coloque la descripcion del servicio prestado:</label>
+          <br> <input type="text" id= "descripcion" name="descripcion" value="Horas de consultoria SAP mes ..." ><br>
+    <br><label id="l_fecha" for="fecha">Seleccione fecha factura:</label>
+        <br> <input type="date" name="fecha"    id="fecha"><br>
+        <br><label for="oc">Numero de Cotizacion /OC:</label><br>
+        <input type="text" id="oc" name="oc"  >
+    <br><label for="UF">Valor USD -- CLP:</label><br>
+    <input type="decimal" id="factor" name="factor">
+<div>
+     
+<br><br><input type="submit" value="Generar Recibo" onclick="getSelectedValue();"> <br>
+<div class="grabar" id="back"><br>
+    <a href="index.html" class="button">Regresar</a>
+</div>
+</div>
+ </form>
+ <!-- Fin del formulario-->
+
+</section>
+</div>
+<div class="df_derecho">
+<aside>
+</aside>   
+</div>
+</main>
+<!-- Seccion JavaScript-->
+<script> 
+  
+    function validar (){
+        var n_numfac = document.getElementById("numfac").value;
+        var l_numfac = document.getElementById("l_numfac");
+        var n_qty    = document.getElementById("qty").value;
+        var l_qty    = document.getElementById("l_qty"); 
+        var n_costo = document.getElementById("costo").value;
+        var l_costo = document.getElementById("l_costo");
+        var n_fecha = document.getElementById("fecha").value;
+        var l_fecha = document.getElementById("l_fecha");
+        var n_descripcion = document.getElementById("descripcion").value;
+        var l_descripcion = document.getElementById("l_descripcion");
+        if (n_numfac == 0) {
+            $("#l_numfac").css("color", "red");
+            $("#numfac").after("*").css("background-color", "red") ;
+            $("#numfac").css("background-color", "pink");
+            return false;
+        }
+         if (n_qty == 0) {
+             $("#l_numfac").css("color", "black");
+             $("#numfac").css("background-color", "white");
+
+            $("#l_qty").css("color", "red");
+            $("#qty").after("*").css("background-color", "red");
+            $("#qty").css("background-color", "pink");
+            return false;
+        }
+        if (n_costo == 0) {
+             $("#l_qty").css("color", "black");
+            $("#qty").css("background-color", "white");
+             
+            $("#l_costo").css("color", "red");
+            $("#costo").after("*").css("background-color", "red");
+            $("#costo").css("background-color", "pink");
+            return false;
+        }
+         if (n_descripcion == "Horas de consultoria SAP mes ..." || n_descripcion == "") {
+             $("#l_costo").css("color", "black");
+             $("#costo").css("background-color", "white");
+
+            $("#l_descripcion").css("color", "red");
+            $("#descripcion").after("*").css("background-color", "red");
+            $("#descripcion").css("background-color", "pink");
+            return false;
+        }
+        if (n_fecha == null || n_fecha == "" ) {
+            $("#l_descripcion").css("color", "black");
+            $("#descripcion").css("background-color", "white");
+
+            $("#l_fecha").css("color", "red");
+            $("#fecha").after("*").css("background-color", "red");
+            $("#fecha").css("background-color", "pink");
+            return false;
+        }
+        
+        return true;
+    }; 
+   
+ function getSelectedValue(){
+    valorCia = document.getElementById('cliente').value;
+    
+    switch (valorCia) {
+     case 'EPC Group':
+         localStorage.setItem('addCst', 'Customer Address:   5090 Richmond Ave ste 336. Houston TX. 77056 ');
+         localStorage.setItem('shpCst', 'Shipping Address:   5090 Richmond Ave ste 336. Houston TX. 77056 ');
+         localStorage.setItem('idCst', ' ');
+          
+         break;
+     case 'Deloitte Servicios Profesionales Limitada':
+          
+        localStorage.setItem('idCst', 'RUT No. 77841030-3');
+        valorSer = document.getElementById('descripcion').value;
+        localStorage.setItem('descrSer',valorSer);
+        localStorage.setItem('addCst', 'Dirección fiscal : Rosario Norte 407, piso 9 Las Condes, Santiago, Chile.   Fono: (56 - 2) 2729 7000');
+        localStorage.setItem('shpCst', 'Dirección envio  : Rosario Norte 407, piso 9 Las Condes, Santiago, Chile.   Fono: (56 - 2) 2729 7000');
+      
+       break;
+     case 'Teva Peru' :
+        localStorage.setItem('idCst', ' ');
+        localStorage.setItem('addCst', 'Dirección fiscal :Av. La Molina 135 Ate Lima 3. Lima.Perú. Teléfono: 4150500 / 348300');
+        localStorage.setItem('shpCst', 'Dirección envio  :Av. La Molina 135 Ate Lima 3.Lima.Perú.  Teléfono: 4150500 / 348300');
+       break;
+    case 'Ivax Argentina S.A.': 
+        localStorage.setItem('addCst', 'Direccion fiscal : Juan José Castelli 6701, Villa Adelina, Provincia de Buenos Aires, Argentina.');
+        localStorage.setItem('shpCst', 'Direccion envio : Juan José Castelli 6701, Villa Adelina, Provincia de Buenos Aires, Argentina.');
+        localStorage.setItem('idCst', ' ');
+       
+     break;
+     case 'Focus Systems Consulting Corp':
+        localStorage.setItem('idCst', 'EIN...................... : 20-4339800');
+        localStorage.setItem('addCst', 'Direccion fiscal : 1070 Montgomery RD. Altamonte Springs # 257. Miami FL 32714. USA');
+        localStorage.setItem('shpCst', 'Direccion envio : 1070 Montgomery RD. Altamonte Springs # 257. Miami FL 32714. USA');
+        valorSer = document.getElementById('descripcion').value;
+        localStorage.setItem('descrSer', valorSer);
+        break;
+    }
+    };
+</script>
+
+</body>
+
+</html>

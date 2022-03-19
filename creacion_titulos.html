@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de etiquetas de la factura</title>
+    <script src="funcionesJS.js"></script>
+</head>
+<body onload="cargaBD()">
+  <div id="etiquetas_cliente">
+    <input type="text" id="tipo_doc">TIPO DOCUMENTO: FACTURA / RECIBO /BOLETA / COTIZACION <br>
+    <input type="text" id="titulo_idioma">Idioma de los titulos:ESP/ENG<br>
+    <input type="text" id="titulo_doc">Titulo del documento: FACTURA / INVOICE/ RECIBO / BOLETA /RECEIPT / COTIZACION / QUOTE<br>
+    <input type="text" id="titulo_fecha">Titulo campo fecha: Fecha / Date <br>
+    <input type="text" id="titulo_numDoc">Titulo para el numero del documento: Numero Factura / Invoice Number <br>
+    <input type="text" id="titulo_nombreCliente">Titulo etiqueta Nombre Cliente: Nombre del cliente: / Customer name: <br>
+    <input type="text" id="titulo_documentoOrigen">Titulo para el Documento refencia: 'O.C.: / P.O: / Cotizacion: /Quote:', <br>
+    <input type="text" id="titulo_terminosCondiciones">Titulo para Terminos y Condiciones: Condiciones / Conditions/ ....<br>
+  
+    <input type="text" id="titulo_item">Titulo para Item: Renglon/ Posicion/ Item<br> 
+    <input type="text" id="titulo_cantidad">Titulo para cantidad: Cant./Qty<br>
+    <input type="text" id="titulo_cu">Titulo para costo: C.U./U.C./Costo Unitario/Unit Cost<br>
+    <input type="text" id="titulo_descripcion">Titulo para descripcion Item: Descripcion /Descriptcion<br>
+    <input type="text" id="titulo_subtotal">Titulo para Subtotal: Subtotal./Sbt<br>
+    <input type="text" id="titulo_impuesto">Titulo para Impuesto: I.V.A./TAX/ ...<br>
+    <input type="text" id="titulo_otraRetencion">Titulo para otra Retencion<br>
+    <input type="text" id="titulo_total">Titulo para el total de la factura: Total USD: / Total BSs:<br>
+    <input type="text" id="meses">Introduzca meses del a#o separados por coma:<br>
+    <input type="button" id="Grabar" onclick="grabaTitulos()" value="Grabar">
+  </div>  
+
+  <div id="consulta_datos">
+
+  </div>
+</body>
+</html>
