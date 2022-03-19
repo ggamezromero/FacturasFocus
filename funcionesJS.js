@@ -367,7 +367,7 @@ function poblarConsultaHistorico() {
                 tr += '<td>' + elementsHistorico[i].costo + '</td>';
                 tr += '<td>' + elementsHistorico[i].qty + '</td>';
                 tr += '<td>' + elementsHistorico[i].subtotal + '</td>';
-                tr += '<td>' + '     +' + '</td>';
+                tr += '<td>' + '     +   ' + '</td>';
                 tr += '</tr>';
             };
             elementsHistorico = [];
